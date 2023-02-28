@@ -2,7 +2,7 @@
 except for name and version */
 const OPTIONS = {
     NAME: 'Mustache Source', // change to name of your project
-    VERSION: '0.0.4', // increment with each release
+    VERSION: '1.0.0', // increment with each release
     BREAKPOINTS: {
         OLD_MOBILE: 320,
         MOBILE: 767,
