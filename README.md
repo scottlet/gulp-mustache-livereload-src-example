@@ -1,6 +1,6 @@
 ### Src files for gulp-mustache-livereload
 
-Check out https://github.com/scottbert/gulp-mustache-livereload
+Check out https://github.com/scottlet/gulp-mustache-livereload
 
 Place this repo inside that checkout as ```src``` (included in above repo as a submodule)
 
