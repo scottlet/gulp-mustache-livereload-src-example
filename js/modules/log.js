@@ -1,17 +1,27 @@
-function CreateLogger() {
-    if (typeof console !== 'undefined') {
-        return (...msg) => {
-            console.log(...msg);
-        };
-    }
+/**
+ * Logger
+ * Returns a function that logs messages to the console if it is defined,
+ * or displays an alert if the console is not defined and the window object
+ * has an alert function.
+ * @returns {Function} A function that logs messages to the console or displays
+ * an alert...
+ */
+function Logger() {
+  if (typeof console !== 'undefined') {
+    return (/** @type {any[]} */ ...msg) => {
+      console.log(...msg);
+    };
+  }
 
-    if ((window || {}).alert) {
-        return msg => {
-            window.alert(msg); //eslint-disable-line
-        };
-    }
+  if (typeof (window || {}).alert !== 'undefined') {
+    return (/** @type {string} */ msg) => {
+      window.alert(msg); //eslint-disable-line
+    };
+  }
+
+  return () => {
+    /** */
+  };
 }
 
-const Logger = CreateLogger();
-
-export { Logger };
+export default Logger;

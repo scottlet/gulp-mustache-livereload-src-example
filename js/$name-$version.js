@@ -1,2 +1,4 @@
-import { Logger } from 'log';
-Logger('this is a test of entrypoint app.js');
+import Logger from '~/log';
+const logger = Logger();
+
+logger('this is a test of entrypoint app.js');
