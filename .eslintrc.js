@@ -6,9 +6,7 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx']
-      }
+      alias: [['~', './js/modules']]
     }
   },
   extends: '../.eslintrc.js'

@@ -1,11 +1,33 @@
 {
   "name": "gulp-mustache-livereload-src",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "browserslist": [
     "> 2%",
     "last 1 version",
     "IE 11",
     "not dead"
-  ]
+  ],
+  "scripts": {
+    "snyk": "snyk test",
+    "test": "gulp test",
+    "lint": "eslint --config .eslintrc.js '**/*.js'",
+    "lint:type-check": "tsc --project jsconfig.json --noEmit  --maxNodeModuleJsDepth 0",
+    "lint:scss": "stylelint '**/*.scss'",
+    "validate": "npm run lint && npm run lint:type-check && npm run lint:scss",
+    "deploy": "NODE_ENV=production gulp deploy",
+    "develop": "NODE_ENV=development gulp",
+    "dev": "NODE_ENV=development gulp",
+    "runPHP": "NODE_ENV=development gulp runPHP",
+    "server": "NODE_ENV=development gulp server",
+    "remotedev": "LIVERELOAD_PORT=35729 NODE_ENV=development gulp",
+    "get-wordpress": "gulp getwp"
+  },
+  "devDependencies": {
+    "eslint-plugin-prefer-smart-quotes": "^2.0.0",
+    "stylelint": "^16.6.1"
+  },
+  "dependencies": {
+    "eslint": "^8.57.0"
+  }
 }
