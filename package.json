@@ -1,6 +1,6 @@
 {
   "name": "gulp-mustache-livereload-src",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "browserslist": [
     "> 2%",
