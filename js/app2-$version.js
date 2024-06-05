@@ -1,4 +1,4 @@
-import CONSTS from '~/consts';
+import { CONSTS } from '~/consts';
 import Logger from '~/log';
 
 const logger = Logger();
